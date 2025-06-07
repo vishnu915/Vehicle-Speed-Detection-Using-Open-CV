@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="vehicle speed detection, traffic surveillance, computer vision, deep learning, traffic analysis">
+  <meta name="description" content="A cutting-edge platform for detecting vehicle speeds using advanced computer vision and deep learning techniques.">
+  <meta name="author" content="">
+
+  <title>Vehicle Speed Detection</title>
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-bg {
+      background-image: linear-gradient(rgba(241, 238, 238, 0.6), rgba(31, 29, 29, 0.6)), url('{{ url_for("static", filename="images/t1.jpg") }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 600px;
+    }
+    .nav-link {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #60a5fa;
+      transform: translateY(-2px);
+    }
+    .cta-button {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-900 text-white py-4 shadow-lg">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="{{ url_for('index') }}" class="flex items-center space-x-3">
+        <img src="{{ url_for('static', filename='images/92.avif') }}" alt="Vehicle Speed Detection Logo" class="h-10">
+        <span class="text-2xl font-bold">Vehicle Speed Detection</span>
+      </a>
+      <div class="space-x-6">
+        <a href="{{ url_for('index') }}" class="nav-link text-lg font-semibold">Home</a>
+
+        <a href="{{ url_for('register') }}" class="nav-link text-lg font-semibold">Register</a>
+        <a href="{{ url_for('login') }}" class="nav-link text-lg font-semibold">Login</a>
+       
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-bg flex items-center justify-center text-center text-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl font-bold mb-4">Vehicle Speed Detection</h1>
+      <p class="text-xl mb-6">Harnessing computer vision and deep learning to analyze traffic and estimate vehicle speeds with precision.</p>
+      <a href="{{ url_for('register') }}" class="cta-button inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg">Register</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Choose Our Platform?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="feature-card bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-4">Accurate Speed Estimation</h3>
+          <p>Average error of ±7 km/h using advanced optical flow and multi-scale convolutional networks.</p>
+        </div>
+        <div class="feature-card bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-4">Real-Time Traffic Analysis</h3>
+          <p>Monitor traffic conditions with robust vehicle detection and tracking algorithms.</p>
+        </div>
+        <div class="feature-card bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-4">Scalable Solution</h3>
+          <p>Easily extendable for traffic flow prediction, anomaly detection, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Vehicle Speed Detection. All rights reserved.</p>
+      <p class="mt-2">Powered by advanced computer vision and deep learning technologies.</p>
+    </div>
+  </footer>
+</body>
+</html>

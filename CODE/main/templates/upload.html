@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="vehicle speed detection, traffic surveillance, computer vision, deep learning, traffic analysis">
+  <meta name="description" content="Upload videos to analyze vehicle speeds using our advanced computer vision and deep learning platform.">
+  <meta name="author" content="">
+
+  <title>Upload - Vehicle Speed Detection</title>
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .upload-bg {
+      background-image: url('{{ url_for("static", filename="images/t9.avif") }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 600px;
+    }
+    .nav-link {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #60a5fa;
+      transform: translateY(-2px);
+    }
+    .form-button {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .form-button:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+    .form-input {
+      transition: border-color 0.3s ease;
+    }
+    .form-input:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    /* Semi-transparent background for form and result sections */
+    .form-container, .result-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-900 text-white py-4 shadow-lg">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="{{ url_for('index') }}" class="flex items-center space-x-3">
+        <img src="{{ url_for('static', filename='images/92.avif') }}" alt="Vehicle Speed Detection Logo" class="h-10">
+        <span class="text-2xl font-bold">Vehicle Speed Detection</span>
+      </a>
+      <div class="space-x-6">
+        <a href="{{ url_for('home') }}" class="nav-link text-lg font-semibold">Home</a>
+        <a href="{{ url_for('about') }}" class="nav-link text-lg font-semibold">About</a>
+        <a href="{{ url_for('upload') }}" class="nav-link text-lg font-semibold text-blue-400">Upload</a>
+        <a href="{{ url_for('index') }}" class="nav-link text-lg font-semibold">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Upload Section -->
+  <section class="upload-bg py-16 flex items-center justify-center">
+    <div class="container mx-auto px-4">
+      <div class="max-w-lg mx-auto form-container p-8">
+        <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Upload Video</h2>
+        {% if message %}
+          <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-6" role="alert">
+            {{ message }}
+          </div>
+        {% endif %}
+        <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+          <div class="mb-4">
+            <label for="video" class="block text-gray-700 font-semibold mb-2">Select Video File</label>
+            <input type="file" id="video" name="video" accept="video/*" class="form-input w-full p-3 border rounded-lg focus:outline-none" required>
+          </div>
+          <button type="submit" class="form-button w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700">Upload Video</button>
+        </form>
+      </div>
+      <!-- {% if filename %}
+        <div class="mt-8 result-container p-8 mx-auto max-w-4xl">
+          <h3 class="text-2xl font-semibold text-gray-800 text-center mb-4">Result</h3>
+          <video id="uploaded-video" controls class="mx-auto mb-4" style="max-width: 100%; height: auto;" height="240">
+            <source src="{{ url_for('static', filename='uploads/' + filename) }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="text-gray-700 text-center"><b>Result:</b> {{ result | default('Video uploaded successfully. Processing not implemented.') }}</p>
+          <!-- Close Video Button -->
+          <div class="text-center">
+            <button id="close-video-btn" class="px-4 py-2 bg-red-500 text-white rounded-lg">Close Video</button>
+          </div>
+        </div>
+      {% endif %} -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 Vehicle Speed Detection. All rights reserved.</p>
+      <p class="mt-2">Powered by advanced computer vision and deep learning technologies.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript to hide the video and close button -->
+  <script>
+    document.getElementById("close-video-btn").addEventListener("click", function() {
+      document.getElementById("uploaded-video").style.display = "none"; // Hides the video
+      this.style.display = "none"; // Hides the close button
+    });
+  </script>
+</body>
+</html>
