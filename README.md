@@ -1,85 +1,74 @@
-Vehicle Speed Detection System 🚗💨
+# Vehicle Speed Detection System 🚗💨
+
 A web-based application designed to analyze traffic video footage and accurately estimate vehicle speeds. This project leverages a powerful combination of computer vision, deep learning, and a user-friendly web interface to provide a complete solution for traffic monitoring.
 
-✨ Key Features
-Secure User Authentication: A complete registration and login system to ensure private and secure access for users.
+---
 
-Intuitive Video Upload: A simple interface for users to upload traffic videos directly from their local machine for analysis.
+## ✨ Key Features
 
-Advanced Speed Estimation: Employs sophisticated deep learning models and computer vision techniques (like optical flow and object tracking) to detect vehicles and calculate their speed with high precision.
+- **Secure User Authentication:** Registration and login system to ensure private and secure access for users.  
+- **Intuitive Video Upload:** Simple interface for users to upload traffic videos directly from their local machine.  
+- **Advanced Speed Estimation:** Uses deep learning models and computer vision techniques (like optical flow and object tracking) to detect vehicles and calculate speeds with high precision.  
+- **High Accuracy:** Achieves a low average speed detection error of approximately ±7 km/h.  
+- **Scalable & Real-Time Ready:** Supports real-time traffic monitoring, anomaly detection, and vehicle re-identification.  
+- **Responsive Frontend:** Clean and modern interface built with HTML, CSS, and JavaScript.  
 
-High Accuracy: Engineered to achieve a low average speed detection error of approximately ±7 km/h, as highlighted in the platform's features.
+---
 
-Scalable & Real-Time Ready: The architecture supports real-time traffic monitoring, anomaly detection, and vehicle re-identification, making it suitable for smart city applications.
+## 💻 Technology Stack
 
-Responsive Frontend: A clean and modern user interface built with HTML, CSS, and JavaScript.
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Python, Flask  
+- **Database:** MySQL  
+- **Machine Learning / Deep Learning:** OpenCV, TensorFlow / PyTorch, NumPy, Pandas  
 
-💻 Technology Stack
-This project is built using a modern and robust stack of technologies:
+> ⚠️ Update the ML/DL libraries with the exact ones you used in your project.
 
-Frontend: HTML, CSS, JavaScript
+---
 
-Backend: Python, Flask
+## ⚙️ Setup and Installation
 
-Database: MySQL
+### 1. Prerequisites
 
-Machine Learning / Deep Learning: OpenCV, TensorFlow / PyTorch, NumPy, Pandas
-(Note: Please update the list of ML/DL libraries with the specific ones you used)
+- Python 3.8+  
+- MySQL Server  
+- Git  
 
-⚙️ Setup and Installation
-To get this project running on your local machine, follow these steps:
+### 2. Clone the Repository
 
-1. Prerequisites
-Make sure you have the following installed:
-
-Python 3.8+
-
-MySQL Server
-
-Git
-
-2. Clone the Repository
-Bash
-
+```bash
 git clone https://github.com/your-username/your-repository-name.git
 cd your-repository-name
 3. Create a Virtual Environment
-It's highly recommended to use a virtual environment to manage project dependencies.
+macOS/Linux:
 
-On macOS/Linux:
-
-Bash
-
+bash
+Copy code
 python3 -m venv venv
 source venv/bin/activate
-On Windows:
+Windows:
 
-Bash
-
+bash
+Copy code
 python -m venv venv
 .\venv\Scripts\activate
 4. Install Dependencies
-Install all the required Python packages from the requirements.txt file.
-(If you haven't created one, run pip freeze > requirements.txt in your activated environment).
-
-Bash
-
+bash
+Copy code
 pip install -r requirements.txt
 5. Database Setup
-Log in to your MySQL server.
+Log in to MySQL and create a database:
 
-Create a new database for the project.
-
-SQL
-
+sql
+Copy code
 CREATE DATABASE vehicle_speed_db;
-Import the necessary table structures. If you have a .sql schema file, you can import it. Otherwise, you may need to run the initial migrations using Flask-Migrate if it's set up.
+Import table structures from your .sql file or run Flask migrations if configured.
 
 6. Configure Environment Variables
-Create a .env file in the root directory and add your configuration details. This keeps your sensitive information secure.
+Create a .env file in the root directory:
 
-Code snippet
-
+env
+Copy code
 # Flask Configuration
 SECRET_KEY='a_very_secret_and_random_key'
 FLASK_ENV=development
@@ -90,25 +79,23 @@ DB_USER='your_mysql_username'
 DB_PASSWORD='your_mysql_password'
 DB_NAME='vehicle_speed_db'
 7. Run the Application
-Execute the following command to start the Flask development server:
-
-Bash
-
+bash
+Copy code
 flask run
-The application should now be running at http://127.0.0.1:5000.
+Access the application at http://127.0.0.1:5000.
 
 🚀 How to Use
-Navigate to the application URL in your web browser.
+Navigate to the application URL in your browser.
 
-Register for a new account using the registration form.
+Register for a new account.
 
-Login with your newly created credentials.
+Login with your credentials.
 
-You will be redirected to the main dashboard. Click on "Start Analyzing Now" or navigate to the "Upload" page.
+Go to the dashboard or "Upload" page.
 
-Choose a traffic video file (.mp4, .avi, etc.) and click "Upload Video".
+Upload a traffic video file (.mp4, .avi, etc.).
 
-The system will process the video, and once the analysis is complete, it will display the speed detection results.
+The system will process the video and display the speed detection results.
 
 🖼️ Screenshots
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7883e280-a7b7-4c3e-bbd5-addda238a2d1" />
