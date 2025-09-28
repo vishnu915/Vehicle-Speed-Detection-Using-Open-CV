@@ -14,13 +14,6 @@ A web-based application designed to analyze traffic video footage and accurately
 - **Responsive Frontend:** Clean and modern interface built with HTML, CSS, and JavaScript.  
 
 ---
-🖼️ Screenshots
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/98bd7a55-4e84-44c1-9621-1d745fb0f527" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5bde8f85-10ee-4218-ac25-fbfa4916ac24" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/38632b3f-aa43-408a-8ac5-ff6aa6e53c52" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9cb0c070-c979-4bd5-9ebf-46b54a504a0c" />
-
 ## 💻 Technology Stack
 
 - **Frontend:** HTML, CSS, JavaScript  
@@ -29,6 +22,13 @@ A web-based application designed to analyze traffic video footage and accurately
 - **Machine Learning / Deep Learning:** OpenCV, TensorFlow / PyTorch, NumPy, Pandas  
 
 > ⚠️ Update the ML/DL libraries with the exact ones you used in your project.
+> 🖼️ Screenshots
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/98bd7a55-4e84-44c1-9621-1d745fb0f527" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5bde8f85-10ee-4218-ac25-fbfa4916ac24" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/38632b3f-aa43-408a-8ac5-ff6aa6e53c52" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9cb0c070-c979-4bd5-9ebf-46b54a504a0c" />
+
 
 ---
 
