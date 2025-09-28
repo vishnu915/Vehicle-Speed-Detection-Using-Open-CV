@@ -98,11 +98,7 @@ Upload a traffic video file (.mp4, .avi, etc.).
 The system will process the video and display the speed detection results.
 
 🖼️ Screenshots
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7883e280-a7b7-4c3e-bbd5-addda238a2d1" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/57606392-cb70-4c54-a94b-ee6b9bcaf622" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/29efb4a6-1962-4d7d-832f-18f8129fa1a5" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/51ccfc55-976e-4e11-ab60-3c911b1e85f5" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2fb4bc2a-97d7-45ed-bc46-3bd7e72ecd2d" />
+
 
 
 
