@@ -103,7 +103,6 @@ Upload a traffic video file (.mp4, .avi, etc.).
 
 The system will process the video and display the speed detection results.
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/628af7f1-c024-4a54-8af8-82ab2f609544" />
 
 
 
