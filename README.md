@@ -43,8 +43,8 @@ A web-based application designed to analyze traffic video footage and accurately
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/vishnu915/Vehicle-Speed-Detection-Using-Open-CV.git
+cd Vehicle-Speed-Detection-Using-Open-CV
 3. Create a Virtual Environment
 macOS/Linux:
 
